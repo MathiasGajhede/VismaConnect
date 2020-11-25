@@ -1,0 +1,15 @@
+{
+    "name": "MathiasGajhede/VismaConnect",
+    "description": "VismaConnect class for connecting and authorization against Vismas services",
+    "license": "MPL",
+    "authors": [
+        {
+            "name": "Mathias Gajhede",
+            "email": "mag@yourpay.io"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+    }
+}
