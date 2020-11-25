@@ -18,7 +18,7 @@ class VismaConnect
         $this->token = $code;
     }
     public function Connect() {
-        return $this->request("authorize_code","code")->access_token;
+        return $this->request("authorization_code","code");
     }
     public function Refresh() {
         return $this->request("refresh_token","refresh_token")->access_token;
