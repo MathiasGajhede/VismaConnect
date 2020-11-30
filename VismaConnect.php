@@ -7,7 +7,7 @@ class VismaConnect
     private $access_token;
     private $uri;
     private $scope;
-    function __construct($code,$client_id,$secret, $uri)
+    function __construct($code,$client_id,$secret,$uri)
     {
         $this->token = $code;
         $this->visma_client_id = $client_id;
