@@ -51,12 +51,11 @@ class VismaConnect
         $fields[$type] = $this->token;
         $fields["redirect_uri"] = $this->uri;
         $fields["client_id"] = $this->visma_client_id;
-        $headers = array(
-            'User-Agent: YourpayConnectClass',
-            'cache-control: no-cache',
-            'Content-Type: application/x-www-form-urlencoded',
-            'Authorization: Basic '.base64_encode($this->visma_client_id . ":" . $this->visma_secret),
-        );
+        $headers = [];
+        $headers[] = "User-Agent: YourpayConnectClass";
+        $headers[] = "cache-control: no-cache";
+        $headers[] = "Content-Type: application/x-www-form-urlencoded";
+        $headers[] = "Authorization: Basic ".base64_encode($this->visma_client_id . ":" . $this->visma_secret);
         $fields_string = "";
         foreach($fields as $key=>$value)
             $fields_string .= $key ."=".$value."&";
