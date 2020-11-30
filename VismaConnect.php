@@ -33,9 +33,7 @@ class VismaConnect
     public function requestUrl() {
         $nonce = $this->generate_code();
         $state = $nonce;
-        $url = $url = "https://connect.visma.com/connect/authorize?client_id=$this->visma_client_id&";
-        $url .= "redirect_uri=$this->uri&response_type=code&nbsp;id_token&scope=$this->scope&response_mode=form_post&nonce=$nonce&state=$state";
-        return $url;
+        return "https://connect.visma.com/connect/authorize?client_id=$this->visma_client_id&redirect_uri=$this->uri&response_type=code&nbsp;id_token&scope=$this->scope&response_mode=form_post&nonce=$nonce&state=$state";
     }
     private function generate_code() {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
