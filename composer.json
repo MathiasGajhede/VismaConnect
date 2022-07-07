@@ -5,10 +5,15 @@
     "authors": [
         {
             "name": "Mathias Gajhede",
-            "email": "mag@yourpay.io"
+            "email": "mag@ippeurope.com"
         }
     ],
     "require": {
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
     },
     "require-dev": {
     }
