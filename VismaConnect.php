@@ -21,7 +21,7 @@ class VismaConnect
         return $this->request("authorization_code","code");
     }
     public function Refresh() {
-        return $this->request("refresh_token","refresh_token")->access_token;
+        return $this->request("refresh_token","refresh_token");
     }
     public function UpdateScope($append_to_scope) {
         $scope = explode("+",$this->scope);
@@ -51,8 +51,9 @@ class VismaConnect
         $fields[$type] = $this->token;
         $fields["redirect_uri"] = $this->uri;
         $fields["client_id"] = $this->visma_client_id;
+        $fields["client_secret"] = $this->visma_secret;
         $headers = [];
-        $headers[] = "User-Agent: YourpayConnectClass";
+        $headers[] = "User-Agent: ConnectClass";
         $headers[] = "cache-control: no-cache";
         $headers[] = "Content-Type: application/x-www-form-urlencoded";
         $headers[] = "Authorization: Basic ".base64_encode($this->visma_client_id . ":" . $this->visma_secret);
